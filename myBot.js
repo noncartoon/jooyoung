@@ -94,3 +94,5 @@ botบอทพรี่คาซึยะ.on('message', message => {
 });
 
 บอทพรี่คาซึยะ.login('NjUyOTM5MTk2NjY2ODcxODE5.XevwRQ.xx6NIszpV-k0x90wy4TV87T-q0Y');
+
+$ node myBot.js
