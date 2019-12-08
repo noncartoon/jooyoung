@@ -1,98 +1,64 @@
-//Get discord.js
 const Discord = require('discord.js');
+const client = new Discord.Client();
 
-//Create client instance as bot
-const botบอทพรี่คาซึยะ = new Discord.Client();
-
-//Set listener on 'ready'
-botบอทพรี่คาซึยะ.on('ready', () => {
-  console.log('Rem ready!');
+client.on('ready', () => {
+  console.log('Hello!');
 });
 
-//Set listener on 'message'
-botบอทพรี่คาซึยะ.on('message', message => {
-  if (message.content === 'อีกระเทย') {
-    message.reply('มึงสิกระเทย');
+client.on('message', message => {
+  if (message.content === '/อีกะเทย') {
+    message.channel.sendMessage('มึงสิกะเทย')
+  } else if (message.content === '/พรี่คาซึยะ') {
+    message.channel.sendMessage('ค้าบบบบ')
+  } else if (message.content === '/สวัสดีค่ะ') {
+    message.channel.sendMessage('ไม่เอาๆ ต้องสวัสดีคะสิ กะเทย')
+  } else if (message.content === '/สวัสดีคะ') {
+    message.channel.sendMessage('ยอดเยี่ยม')
+  } else if (message.content === '/รักนะ') {
+    message.channel.sendMessage('รักเหมือนกัน จุ๊บๆ')
   }
 });
 
-//Set listener on 'message'
-botบอทพรี่คาซึยะ.on('message', message => {
-  if (message.content === 'สวัสดีครับ') {
-    message.reply('ท่านสมาชิกคนชอบสี');
+client.on('message', message => {
+  if (message.content === '/สวัสดีครับ') {
+    message.channel.sendMessage('ท่านสมาชิกคนชอบสี');
   }
 });
 
-//Set listener on 'message'
-botบอทพรี่คาซึยะ.on('message', message => {
-  if (message.content === 'น้ำทิพย์เป็นคนยังไง') {
-    message.reply('เป็นกระเทย');
+client.on('message', message => {
+  if (message.content === '/น้ำทิพย์เป็นคนยังไง') {
+    message.channel.sendMessage('เป็นกะเทย');
   }
 });
 
-//Set listener on 'message'
-botบอทพรี่คาซึยะ.on('message', message => {
-  if (message.content === 'แหนมเป็นคนยังไง') {
-    message.reply('เป็นกระเทยไง');
+client.on('message', message => {
+  if (message.content === '/คมสันเป็นคนยังไง') {
+    message.channel.sendMessage('เป็นอีกะเทย');
   }
 });
 
-//Set listener on 'message'
-botบอทพรี่คาซึยะ.on('message', message => {
-  if (message.content === 'คมสันเป็นคนยังไง') {
-    message.reply('เป็นอีกระเทย');
+client.on('message', message => {
+  if (message.content === 'มึงสิกะเทย') {
+    message.channel.sendMessage('เดี๋ยวกูจะแจ้ง เดี๋ยวกูจะแจ้ง');
   }
 });
 
-//Set listener on 'message'
-botบอทพรี่คาซึยะ.on('message', message => {
-  if (message.content === 'โอ๊ตเป็นคนยังไง') {
-    message.reply('อีกระเทย');
+client.on('message', message => {
+  if (message.content === '/ชานนท์เป็นคนยังไง') {
+    message.channel.sendMessage('หล่อสุด');
   }
 });
 
-//Set listener on 'message'
-botบอทพรี่คาซึยะ.on('message', message => {
-  if (message.content === 'มึงสิกระเทย') {
-    message.reply('เดี๋ยวกูจะแจ้ง เดี๋ยวกูจะแจ้ง');
+client.on('message', message => {
+  if (message.content === '/แจ๊ปเป็นคนยังไง') {
+    message.channel.sendMessage('เป็นร้อนใน');
   }
 });
 
-//Set listener on 'message'
-botบอทพรี่คาซึยะ.on('message', message => {
-  if (message.content === 'พรี่แง้เป็นคนยังไง') {
-    message.reply('ดี');
+client.on('message', message => {
+  if (message.content === '/เปิดเพลง') {
+    message.channel.sendMessage('ก็ใส่โค๊ดเพลงที่จะเปิดมาสิวะ กระเทย');
   }
 });
 
-//Set listener on 'message'
-botบอทพรี่คาซึยะ.on('message', message => {
-  if (message.content === 'นนท์เป็นคนยังไง') {
-    message.reply('หล่อสุด');
-  }
-});
-
-//Set listener on 'message'
-botบอทพรี่คาซึยะ.on('message', message => {
-  if (message.content === 'นนท์เป็นคนยังไง') {
-    message.reply('สุดหล่อว่ะ');
-  }
-});
-
-//Set listener on 'message'
-botบอทพรี่คาซึยะ.on('message', message => {
-  if (message.content === 'แจ๊ปเป็นคนยังไง') {
-    message.reply('เป็นร้อนใน');
-  }
-});
-
-//Set listener on 'message'
-botบอทพรี่คาซึยะ.on('message', message => {
-  if (message.content === 'เปิดเพลง') {
-    message.reply('ก็ใส่โค๊ดเพลงที่จะเปิดมาสิวะ กระเทย');
-  }
-});
-
-botบอทพรี่คาซึยะ.login('NjUyOTM5MTk2NjY2ODcxODE5.XevwRQ.xx6NIszpV-k0x90wy4TV87T-q0Y');
-
-$ node myBot.js
+client.login('NjUyOTM5MTk2NjY2ODcxODE5.XeyRIw.GZKeIKd4gioYgGM7SS6Bsnbj5Pg');
